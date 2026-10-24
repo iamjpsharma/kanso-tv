@@ -1,0 +1,24 @@
+# Debloat profile for TCL G13 (Android 14, India firmware, mt5867).
+# Tested on one TV. Only disables packages; nothing is uninstalled.
+# Undo with: ./restore.sh profiles/tcl-g13.txt
+#
+# Prerequisite: install the custom launcher (com.kansotv.launcher) and make it Home
+# before applying this profile. The first two packages are the stock Google TV
+# launcher and its setup fallback; disabling them removes the stock Home fallback.
+#
+# Kept on purpose: BrowseHere (com.tcl.browser), YouTube Music
+# (com.google.android.youtube.tvmusic), Play Movies (com.google.android.videos),
+# and Play Games (com.google.android.play.games).
+
+# stock launcher / setup fallback (replaced by com.kansotv.launcher)
+com.google.android.apps.tv.launcherx
+com.google.android.tungsten.setupwraith
+
+# approved telemetry / logging
+com.tcl.logkit
+com.google.android.feedback
+
+# approved TCL/MediaTek clutter and demos
+com.tcl.messagebox
+com.mediatek.MtkDemo
+fusion.android.tv.demo
